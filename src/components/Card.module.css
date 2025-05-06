@@ -1,0 +1,25 @@
+
+body{background-color: rgb(86, 95, 95);
+
+}
+.card{
+    background-color: rgb(97, 195, 178);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 20px 20px 20px hsl(0, 80%, 65%);
+    margin-top: 100px;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    
+}
+
+.card :hover{
+
+    
+    
+    color: rgb(255, 255, 255);
+    
+}
+
+
