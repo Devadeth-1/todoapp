@@ -1,18 +1,19 @@
-import Card from "./components/Card";
+import { useState } from "react";
 
 export default function App() {
 
+  const increment = () => {
+    setCount(count + 1);
+    console.log('Count is now: ', count);
+  };
+
+const [count, setCount]= useState(0);
   return(
-    <div>
-      
-      <div>
-
-      <Card title='Nesa' content='Sinro contents based on the Embeded System and the Ai ML robitics based classes , python react , data analytics etc ' />
-      
-      </div>
-
+    <div className="main">
+      <h1>{count}</h1>
+      <button className="button-main" onClick={increment}>+</button>
       
     </div>
-  )
+  );
 }
 
