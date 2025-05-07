@@ -1,21 +1,61 @@
-import { useState } from "react";
+
+function Blog({title, content}){
+ return ( <div>
+              <h1>{title}</h1>
+              <p>{content}</p>
+          </div>
+      );
+      }
+
 
 export default function App() {
+  const blogs= [
 
-  const increment = () => {
-    setCount(count => count + 1);
-    console.log('Count is now: ', count);
-    setCount(count => count + 1);
+    {title: "My blog 1", content: "My blog 1 content"},
+    {title: "My blog 2", content: "My blog 2 content"},
+    {title: "My blog 3", content: "My blog 3 content"},
+    {title: "My blog 4", content: "My blog 4 content"},
+    {title: "My blog 5", content: "My blog 5 content"},
 
-  };
-
-const [count, setCount]= useState(0);
-  return(
-    <div className="main">
-      <h1>{count}</h1>
-      <button className="button-main" onClick={increment}>+</button>
-      
-    </div>
+  ];
+  return (
+  <div>
+    <h1>Blogs</h1>
+    <hr />
+    {blogs.map((blog) => (
+      <Blog title={blog.title} content={blog.content} />
+    ))}
+  </div>
   );
 }
+
+
+
+
+
+
+// import { useState } from "react";
+
+// export default function App() {
+
+//   const increment = () => {
+//     setCount(count => count + 1);
+//     console.log('Count is now: ', count);
+//     setCount(count => count + 1);
+
+//   };
+
+// const [count, setCount]= useState(0);
+//   return(
+//     <div className="main">
+//       <h1>{count}</h1>
+//       <button className="button-main" onClick={increment}>+</button>
+      
+//     </div>
+//   );
+// }
+
+
+
+
 
