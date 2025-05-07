@@ -1,11 +1,4 @@
-
-function Blog({title, content}){
- return ( <div>
-              <h1>{title}</h1>
-              <p>{content}</p>
-          </div>
-      );
-      }
+import Blog from "./components/Blogs";
 
 
 export default function App() {
