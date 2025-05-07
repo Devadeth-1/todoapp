@@ -3,8 +3,10 @@ import { useState } from "react";
 export default function App() {
 
   const increment = () => {
-    setCount(count + 1);
+    setCount(count => count + 1);
     console.log('Count is now: ', count);
+    setCount(count => count + 1);
+
   };
 
 const [count, setCount]= useState(0);
